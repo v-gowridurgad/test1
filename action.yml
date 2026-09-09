@@ -7,9 +7,7 @@ runs:
       uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: aparnajyothi-y/setup-python@Feature-request#476
+      uses: actions/setup-node@v7
       with:
-        python-version: '3.10'
-        cache: 'pip'
-        cache-dependency-path: ${{github.action_path}}/requirements.txt
+        node-version-file: ${{ github.action_path }}/.nvmrc
     
