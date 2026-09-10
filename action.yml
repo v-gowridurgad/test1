@@ -9,6 +9,6 @@ runs:
     - name: Set up Node.js
       uses: v-mahabaleshwars/setup-node@feature/852-absolute-path
       with:
-        node-version-file: ${{ github.action_path }}/.tool-versions
+        node-version-file: ${{ github.action_path }}/package.json
     
 
