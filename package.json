@@ -9,10 +9,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
+  "engines": {
+    "node": "^22 || ^24"
+  },
   "devEngines": {
-    "packageManager": {
-      "name": "npm",
-      "version": "^11.5.1"
+    "runtime": {
+      "name": "node",
+      "version": "^24.3"
     }
+  },
+  "volta": {
+    "node": "24.11.1"
+  }
 }
-}
+
+
