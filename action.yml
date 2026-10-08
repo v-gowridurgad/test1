@@ -1,5 +1,10 @@
 name: 'Composite Action Example'
 description: 'A composite action to checkout code and set up Node.js'
+inputs:
+  go-version-file:
+    description: 'Path to go.mod'
+    required: false
+    default: 'go.mod'
 runs:
   using: 'composite'
   steps:
@@ -9,10 +14,10 @@ runs:
     - name: Set up go
       uses: actions/setup-go@v7
       with:
-        go-version-file: go.mod
+        go-version-file: ${{ inputs.go-version-file }}
 
     - name: Set up go
       uses: actions/setup-go@v7
       with:
-        go-version-file: go.mod
+        go-version-file: ${{ inputs.go-version-file }}
 
