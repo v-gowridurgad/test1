@@ -6,9 +6,13 @@ runs:
     - name: Checkout code
       uses: actions/checkout@v7
 
-    - name: Set up Node.js
-      uses: v-mahabaleshwars/setup-node@feature/852-absolute-path
+    - name: Set up go
+      uses: actions/setup-go@v7
       with:
-        node-version-file: ${{ github.action_path }}/mise.toml
-    
+        go-version-file: go.mod
+
+    - name: Set up go
+      uses: actions/setup-go@v7
+      with:
+        go-version-file: go.mod
 
